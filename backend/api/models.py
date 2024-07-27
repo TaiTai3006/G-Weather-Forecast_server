@@ -6,5 +6,4 @@ class Mail(models.Model):
     status = models.IntegerField()
 
     class Meta:
-        managed = False
-        db_table = 'mail'
+        db_table = "tbl_mail"
