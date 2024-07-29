@@ -6,6 +6,17 @@ from api.serializers import *
 import smtplib
 from email.message import EmailMessage
 from rest_framework import status
+from django.http import HttpResponse
+
+def index(request):
+    html = f'''
+    <html>
+        <body>
+            <h1>Hello from Weather Dashboard</h1>
+        </body>
+    </html>
+    '''
+    return HttpResponse(html)
 
 @api_view(['GET'])
 def getWeatherInfo(request):
